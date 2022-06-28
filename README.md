@@ -65,9 +65,9 @@
 
 4.得到7款推荐的香水，包含每款香水的详细信息，效果如下图
 
-  ![result1](C:/Users/dell/Desktop/Expert_System/pics/result1.png)
+  ![result1](./pics/result1.png)
 
-  ![result2](C:/Users/dell/Desktop/Expert_System/pics/result2.png)
+  ![result2](./pics/result2.png)
 
 
 ## 五、系统分析
@@ -128,43 +128,43 @@
 - 所有的输入变量采用三角形或四边形，而输出选用高斯函数
 - 留香时间 lasting_time
 
-  ![](C:/Users/dell/Desktop/Expert_System/pics/lasting_time.png)
+  ![](./pics/lasting_time.png)
 
 - 留香评分 time_score
 
-  ![](C:/Users/dell/Desktop/Expert_System/pics/time_score.png)
+  ![](./pics/time_score.png)
 
 - 用户评分 rate
 
-  ![](C:/Users/dell/Desktop/Expert_System/pics/rate.png)
+  ![](./pics/rate.png)
 
 - 排名 rank
 
-  ![](C:/Users/dell/Desktop/Expert_System/pics/rank.png)
+  ![](./pics/rank.png)
 
 - 用户喜爱度评分 user_love_score
 
-  ![](C:/Users/dell/Desktop/Expert_System/pics/user_love_score.png)
+  ![](./pics/user_love_score.png)
 
 - 年代 year
 
-  ![](C:/Users/dell/Desktop/Expert_System/pics/year.png)
+  ![](./pics/year.png)
 
 - 年代偏好 user_prefer
 
-  ![](C:/Users/dell/Desktop/Expert_System/pics/user_prefer.png)
+  ![](./pics/user_prefer.png)
 
 - 年代评分 year_score
 
-  ![](C:/Users/dell/Desktop/Expert_System/pics/year_score.png)
+  ![](./pics/year_score.png)
 
 - 清新（古典、浓郁、芬芳的模糊集也同下图）
 
-  ![](C:/Users/dell/Desktop/Expert_System/pics/清新.png)
+  ![](./pics/清新.png)
 
 - 柑橘调（其它 10 种香调的模糊集也同下图）
 
-  ![](C:/Users/dell/Desktop/Expert_System/pics/柑橘调.png)
+  ![](./pics/柑橘调.png)
 
 #### （三）抽取并构造模糊规则
 ##### Rule Base 1
