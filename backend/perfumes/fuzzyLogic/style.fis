@@ -1,0 +1,146 @@
+[System]
+Name='style'
+Type='mamdani'
+Version=2.0
+NumInputs=4
+NumOutputs=11
+NumRules=12
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='清新'
+Range=[0 1]
+NumMFs=3
+MF1='讨厌':'trapmf',[0 0 0.2 0.4]
+MF2='无感':'trapmf',[0.2 0.4 0.6 0.8]
+MF3='喜欢':'trapmf',[0.6 0.8 1 1]
+
+[Input2]
+Name='古典'
+Range=[0 1]
+NumMFs=3
+MF1='讨厌':'trapmf',[0 0 0.2 0.4]
+MF2='无感':'trapmf',[0.2 0.4 0.6 0.8]
+MF3='喜欢':'trapmf',[0.6 0.8 1 1]
+
+[Input3]
+Name='浓郁'
+Range=[0 1]
+NumMFs=3
+MF1='讨厌':'trapmf',[0 0 0.2 0.4]
+MF2='无感':'trapmf',[0.2 0.4 0.6 0.8]
+MF3='喜欢':'trapmf',[0.6 0.8 1 1]
+
+[Input4]
+Name='芬芳'
+Range=[0 1]
+NumMFs=3
+MF1='讨厌':'trapmf',[0 0 0.2 0.4]
+MF2='无感':'trapmf',[0.2 0.4 0.6 0.8]
+MF3='喜欢':'trapmf',[0.6 0.8 1 1]
+
+[Output1]
+Name='柑橘调'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gaussmf',[0.2123 0]
+MF2='mid':'gaussmf',[0.2123 0.5]
+MF3='high':'gaussmf',[0.2123 1]
+
+[Output2]
+Name='绿叶调'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gaussmf',[0.2123 0]
+MF2='mid':'gaussmf',[0.2123 0.5]
+MF3='high':'gaussmf',[0.2123 1]
+
+[Output3]
+Name='水生调'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gaussmf',[0.2123 0]
+MF2='mid':'gaussmf',[0.2123 0.5]
+MF3='high':'gaussmf',[0.2123 1]
+
+[Output4]
+Name='馥奇香调'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gaussmf',[0.2123 0]
+MF2='mid':'gaussmf',[0.2123 0.5]
+MF3='high':'gaussmf',[0.2123 1]
+
+[Output5]
+Name='皮革调'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gaussmf',[0.2123 0]
+MF2='mid':'gaussmf',[0.2123 0.5]
+MF3='high':'gaussmf',[0.2123 1]
+
+[Output6]
+Name='西普调'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gaussmf',[0.2123 0]
+MF2='mid':'gaussmf',[0.2123 0.5]
+MF3='high':'gaussmf',[0.2123 1]
+
+[Output7]
+Name='木制调'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gaussmf',[0.2123 0]
+MF2='mid':'gaussmf',[0.2123 0.5]
+MF3='high':'gaussmf',[0.2123 1]
+
+[Output8]
+Name='东方调'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gaussmf',[0.2123 0]
+MF2='mid':'gaussmf',[0.2123 0.5]
+MF3='high':'gaussmf',[0.2123 1]
+
+[Output9]
+Name='美食调'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gaussmf',[0.2123 0]
+MF2='mid':'gaussmf',[0.2123 0.5]
+MF3='high':'gaussmf',[0.2123 1]
+
+[Output10]
+Name='花香调'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gaussmf',[0.2123 0]
+MF2='mid':'gaussmf',[0.2123 0.5]
+MF3='high':'gaussmf',[0.2123 1]
+
+[Output11]
+Name='果香调'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gaussmf',[0.2123 0]
+MF2='mid':'gaussmf',[0.2123 0.5]
+MF3='high':'gaussmf',[0.2123 1]
+
+[Rules]
+3 0 0 0, 3 3 3 2 2 2 1 1 1 2 2 (1) : 1
+0 3 0 0, 2 2 2 3 3 3 2 2 2 1 1 (1) : 1
+0 0 3 0, 1 1 1 2 2 2 3 3 3 2 2 (1) : 1
+0 0 0 3, 2 2 2 1 1 1 2 2 2 3 3 (1) : 1
+2 0 0 0, 2 2 2 0 0 0 0 0 0 0 0 (0.5) : 1
+0 2 0 0, 0 0 0 2 2 2 0 0 0 0 0 (0.5) : 1
+0 0 2 0, 0 0 0 0 0 0 2 2 2 0 0 (0.5) : 1
+0 0 0 2, 0 0 0 0 0 0 0 0 0 2 2 (0.5) : 1
+1 0 0 0, 1 1 1 2 2 2 3 3 3 2 2 (0.8) : 1
+0 1 0 0, 2 2 2 1 1 1 2 2 2 3 3 (0.8) : 1
+0 0 1 0, 3 3 3 2 2 2 1 1 1 2 2 (0.8) : 1
+0 0 0 1, 2 2 2 3 3 3 2 2 2 1 1 (0.8) : 1

@@ -1,0 +1,57 @@
+[System]
+Name='user_love'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=15
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='rate'
+Range=[8 10]
+NumMFs=3
+MF1='low':'trapmf',[8 8 8.25 8.75]
+MF2='mid':'trapmf',[8.25 8.75 9.25 9.75]
+MF3='high':'trapmf',[9.25 9.75 10 10]
+
+[Input2]
+Name='rank'
+Range=[1 200]
+NumMFs=5
+MF1='very__high':'trapmf',[1 1 5.975 45.77]
+MF2='high':'trapmf',[5.975 45.77 55.73 95.53]
+MF3='middle':'trapmf',[55.72 95.53 105.5 145.3]
+MF4='low':'trapmf',[105.5 145.3 155.2 195]
+MF5='very_low':'trapmf',[155.2 195 200 200]
+
+[Output1]
+Name='user_love_score'
+Range=[0 1]
+NumMFs=5
+MF1='bad':'gaussmf',[0.1062 0]
+MF2='relatively_bad':'gaussmf',[0.1062 0.25]
+MF3='soso':'gaussmf',[0.1062 0.5]
+MF4='relatively_good':'gaussmf',[0.1062 0.75]
+MF5='good':'gaussmf',[0.1062 1]
+
+[Rules]
+3 1, 5 (1) : 1
+3 2, 5 (1) : 1
+3 3, 3 (1) : 1
+3 4, 3 (1) : 1
+3 5, 2 (1) : 1
+2 1, 4 (1) : 1
+2 2, 4 (1) : 1
+2 3, 3 (1) : 1
+2 4, 2 (1) : 1
+2 5, 2 (1) : 1
+1 1, 4 (1) : 1
+1 2, 3 (1) : 1
+1 3, 3 (1) : 1
+1 4, 1 (1) : 1
+1 5, 1 (1) : 1

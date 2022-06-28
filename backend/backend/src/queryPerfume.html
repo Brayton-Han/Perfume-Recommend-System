@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <title>香水推荐</title>
+        <style>
+            #header {
+                background-color:black;
+                color:white;
+                text-align:center;
+                padding:5px;
+            }
+            #section {
+                height:480px;
+                width: 1335px;
+                float:left;
+                padding:10px;
+                text-align: center;
+                overflow:auto
+            }
+            #footer {
+                background-color:black;
+                color:white;
+                clear:both;
+                text-align:center;
+                padding:1px;	 	 
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <div id="header">
+            <H1><font size="10"> 香水推荐 </font></H1>
+        </div>
+
+        <div id="section">
+            <br>
+            <form action="/" method="post">
+                {% if message %}
+                    <div class="alert alert-warning">{{ message }}</div>
+                {% endif %}
+                {% csrf_token %}
+                <table align="center" border="1">
+                    <tr>
+                        <th align="center"> {{ query_form.men.label_tag }} </th>
+                        <th align="center"> {{ query_form.men }} </th>
+                        <th align="center"> 不考虑它则勾选 </th>
+                    </tr>
+                    <tr>
+                        <th align="center"> {{ query_form.mid.label_tag }} </th>
+                        <th align="center"> {{ query_form.mid }} </th>
+                        <th align="center"> 不考虑它则勾选 </th>
+                    </tr>
+                    <tr>
+                        <th align="center"> {{ query_form.women.label_tag }} </th>
+                        <th align="center"> {{ query_form.women }} </th>
+                        <th align="center"> 不考虑它则勾选 </th>
+                    </tr>
+                    <tr>
+                        <th align="center"> {{ query_form.weight1.label_tag }} </th>
+                        <th align="center"> {{ query_form.weight1 }} </th>
+                        <th align="center"> 范围为[0,1] 数值越大在乎程度越大 </th>
+                    </tr>
+                    <tr>
+                        <th align="center"> {{ query_form.weight2.label_tag }} </th>
+                        <th align="center"> {{ query_form.weight2 }} </th>
+                        <th align="center"> 范围为[0,1] 数值越大留香时间越长 </th>
+                    </tr>
+                    <tr>
+                        <th align="center"> {{ query_form.year_prefer.label_tag }} </th>
+                        <th align="center"> {{ query_form.year_prefer }} </th>
+                        <th align="center"> 范围为[0,1] 数值越大则更偏好新款 </th>
+                    </tr>
+                    <tr>
+                        <th align="center"> {{ query_form.qing_xin.label_tag }} </th>
+                        <th align="center"> {{ query_form.qing_xin }} </th>
+                        <th align="center"> 范围为[0,1] 数值越大喜爱程度越大 </th>
+                    </tr>
+                    <tr>
+                        <th align="center"> {{ query_form.gu_dian.label_tag }} </th>
+                        <th align="center"> {{ query_form.gu_dian }} </th>
+                        <th align="center"> 范围为[0,1] 数值越大喜爱程度越大 </th>
+                    </tr>
+                    <tr>
+                        <th align="center"> {{ query_form.nong_yu.label_tag }} </th>
+                        <th align="center"> {{ query_form.nong_yu }} </th>
+                        <th align="center"> 范围为[0,1] 数值越大喜爱程度越大 </th>
+                    </tr>
+                    <tr>
+                        <th align="center"> {{ query_form.fen_fang.label_tag }} </th>
+                        <th align="center"> {{ query_form.fen_fang }} </th>
+                        <th align="center"> 范围为[0,1] 数值越大喜爱程度越大 </th>
+                    </tr>
+                    <br/>
+                </table>
+                <br>
+                <input type="submit" value="点击推荐">
+            </form>
+        </div>
+
+        <div id="footer">
+            Copyright @Brayton
+        </div>
+
+    </body>
+
+</html>
