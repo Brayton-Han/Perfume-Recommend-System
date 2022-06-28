@@ -59,7 +59,7 @@
 
 2.在浏览器打开 `http://127.0.0.1:8000/`，页面如下
 
-  ![main](C:/Users/dell/Desktop/Expert_System/pics/main.png)
+  ![main](./pics/main.png)
 
 3.根据提示和要求填写表单，点击 `点击推荐` 按钮，等待几秒钟
 
